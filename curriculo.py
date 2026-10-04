@@ -16,7 +16,7 @@ def informacoesInicias():
    c =           input("Cidade Atual: ")
    e =           input("Endereco Atual: ")
    ema =         input("Endereco de E-mail: ")
-   link =        input("Nome de Usuário no LinkdIn: ")
+   link =        input("Nome de Usuário no LinkedIn: ")
    cel =         input("Celular para contato: ")
 
    incluirFoto = input("Deseja incluir uma foto de perfil? [S/N]: ")
@@ -89,7 +89,7 @@ def informacoesAdicionais():
     pergunta = 'S'
     while pergunta.upper() == 'S':
         id = input("Insira o idioma que você possui domínio: ")
-        n =  input("Qual a sua categoria de proeficiência nesse idioma?\n\n Iniciante - Básico/Elementar - Intermediário \n Intermediário Superior/Avançado - Avançado - Proeficiência Plena/Nativo\n\nEscolha: ")
+        n =  input("Qual a sua categoria de proficiência nesse idioma?\n\n Iniciante - Básico/Elementar - Intermediário \n Intermediário Superior/Avançado - Avançado - Proeficiência Plena/Nativo\n\nEscolha: ")
         idioma.write( "\n" + id + " - " + n + "\n\n")
         pergunta = input("Você possui domínio em mais algum idioma? [S/N]: ")
 
@@ -411,7 +411,7 @@ def funcoes():
             qualidade =   open(f"{nomeHTML}Qualidades.txt","r")
             curso =       open(f"{nomeHTML}Cursos.txt","r")
     
-            print("Dados Inciais:\n")
+            print("Dados Iniciais:\n")
             print(nome.read())
             print(idade.read())
             print(estadoCivil.read())
