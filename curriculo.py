@@ -1,127 +1,116 @@
-
-
 def informacoesInicias():
-    pergunta = 'S'
-    while pergunta.upper() == 'S':
-        nome =        open(f"{nomeHTML}NomeCompleto.txt","w")
-        idade =       open(f"{nomeHTML}Idade.txt","w")
-        estadoCivil = open(f"{nomeHTML}EstadoCivil.txt","w")
-        cidade =      open(f"{nomeHTML}Cidade.txt","w")
-        endereco =    open(f"{nomeHTML}Endereco.txt","w")
-        email =       open(f"{nomeHTML}Email.txt","w")
-        linkedin =    open(f"{nomeHTML}LinkedIn.txt","w")
-        celular =     open(f"{nomeHTML}Celular.txt","w")
-        foto =        open(f"{nomeHTML}Foto.txt","w")
+   nome =        open(f"{nomeHTML}NomeCompleto.txt","w")
+   idade =       open(f"{nomeHTML}Idade.txt","w")
+   estadoCivil = open(f"{nomeHTML}EstadoCivil.txt","w")
+   cidade =      open(f"{nomeHTML}Cidade.txt","w")
+   endereco =    open(f"{nomeHTML}Endereco.txt","w")
+   email =       open(f"{nomeHTML}Email.txt","w")
+   linkedin =    open(f"{nomeHTML}LinkedIn.txt","w")
+   celular =     open(f"{nomeHTML}Celular.txt","w")
+   foto =        open(f"{nomeHTML}Foto.txt","w")
 
     
-        n =           input("Nome Completo: ")
-        i =           input("Idade: ")
-        ec =          input("Estado Civil: ")
-        c =           input("Cidade Atual: ")
-        e =           input("Endereco Atual: ")
-        ema =         input("Endereco de E-mail: ")
-        link =        input("Nome de Usuário no LinkdIn: ")
-        cel =         input("Celular para contato: ")
+   n =           input("Nome Completo: ")
+   i =           input("Idade: ")
+   ec =          input("Estado Civil: ")
+   c =           input("Cidade Atual: ")
+   e =           input("Endereco Atual: ")
+   ema =         input("Endereco de E-mail: ")
+   link =        input("Nome de Usuário no LinkdIn: ")
+   cel =         input("Celular para contato: ")
 
-        incluirFoto = input("Deseja incluir uma foto de perfil? [S/N]: ")
-        if incluirFoto.upper() == 'S':
-            perfil = f"img/{nomeHTML}.png"
-        else:
-            perfil = "img/semFoto.png"
-            print("\n\nObservação: A falta de foto no currículo pode interferir na escolha dos gestores.\n\n")
+   incluirFoto = input("Deseja incluir uma foto de perfil? [S/N]: ")
+   if incluirFoto.upper() == 'S':
+       perfil = f"img/{nomeHTML}.png"
+   else:
+       perfil = "img/semFoto.png"
+       print("\n\nObservação: A falta de foto no currículo pode interferir na escolha dos gestores.\n\n")
 
-        pergunta = input("Deseja realizar preenchimento do seus dados iniciais novamente? [S/N]: ")
+   nome.write("\n" + n + "\n")
+   idade.write( i + "\n")
+   estadoCivil.write( ec + "\n")
+   cidade.write(c + "\n")
+   endereco.write( e + "\n")
+   email.write( ema + "\n")
+   linkedin.write(link + "\n")
+   celular.write( cel + "\n")
+   foto.write( perfil + "\n")
 
-        nome.write("\n" + n + "\n")
-        idade.write( i + "\n")
-        estadoCivil.write( ec + "\n")
-        cidade.write(c + "\n")
-        endereco.write( e + "\n")
-        email.write( ema + "\n")
-        linkedin.write(link + "\n")
-        celular.write( cel + "\n")
-        foto.write( perfil + "\n")
-
-        nome.close()
-        idade.close()
-        estadoCivil.close()
-        cidade.close()
-        endereco.close()
-        email.close()
-        linkedin.close()
-        celular.close()
-        foto.close()
+   nome.close()
+   idade.close()
+   estadoCivil.close()
+   cidade.close()
+   endereco.close()
+   email.close()
+   linkedin.close()
+   celular.close()
+   foto.close()
 
 def informacoesProfissionais():
-    perguntaIP = 'S'
-    while perguntaIP.upper() == 'S':
-        objetivo =    open(f"{nomeHTML}Objetivos.txt","w")
-        resumo =      open(f"{nomeHTML}ResumoProfissional.txt","w")
-        formacao =    open(f"{nomeHTML}Formação.txt","w")
-        experiencia = open(f"{nomeHTML}ExperiênciasProfissionais.txt","w")
+    objetivo =    open(f"{nomeHTML}Objetivos.txt","w")
+    resumo =      open(f"{nomeHTML}ResumoProfissional.txt","w")
+    formacao =    open(f"{nomeHTML}Formação.txt","w")
+    experiencia = open(f"{nomeHTML}ExperiênciasProfissionais.txt","w")
 
-        o = input("Descreva o seu Objetivo Profissional: ")
-        r=  input("Resumo Profissional: ")
+    o = input("Descreva o seu Objetivo Profissional: ")
+    r=  input("Resumo Profissional: ")
 
-        pergunta = 'S'
-        while pergunta.upper() == 'S':
+    pergunta = 'S'
+    while pergunta.upper() == 'S':
+        f = input("Formação Acadêmica: ")
+        i = input("Instituição: ")
+        c = input("Cidade: ")
+        p = input("Período: ")
+        formacao.write( "\n" + f + " - " + i + " - " + c + " - " + p + "\n\n")
+        pergunta = input("Deseja adicionar alguma outra formação acadêmica? [S/N]: ")
 
-            f = input("Formação Acadêmica: ")
-            i = input("Instituição: ")
-            c = input("Cidade: ")
-            p = input("Período: ")
-            formacao.write( "\n" + f + " - " + i + " - " + c + " - " + p + "\n\n")
-            pergunta = input("Deseja adicionar alguma outra formação acadêmica? [S/N]: ")
-
+    pE = 'S'
+    while pE.upper() == 'S':
+        exP =  input("Experiencia Profissional - Organização/Empresa: ")
+        cA =   input("Cargo: ")
+        pExp = input("Período: ")
+        a =    input("Atividades Desenvolvidas: ")
+        experiencia.write( "\n" + exP + " - " + cA + " - " + pExp + " - " + a + "\n\n" )
+        pE = input("Deseja adicionar alguma outra experiência profissional? [S/N]: ")
     
-        pE = 'S'
-        while pE.upper() == 'S':
-            exP =  input("Experiencia Profissional - Organização/Empresa: ")
-            cA =   input("Cargo: ")
-            pExp = input("Período: ")
-            a =    input("Atividades Desenvolvidas: ")
-            experiencia.write( "\n" + exP + " - " + cA + " - " + pExp + " - " + a + "\n\n" )
-            pE = input("Deseja adicionar alguma outra experiência profissional? [S/N]: ")
-        perguntaIP= input("Deseja realizar o preenchimento dos seus dados de Informações Profissionais novamente? [S/N]: ") 
-
     objetivo.write( "\n" + o + "\n")
     resumo.write( r + "\n")
-    
+
     objetivo.close()
     resumo.close()
     formacao.close()
     experiencia.close()
 
 def informacoesAdicionais():
-    perguntaIA = 'S'
-    while perguntaIA.upper() == 'S':
-        idioma =    open(f"{nomeHTML}Idioma.txt","w")
-        qualidade = open(f"{nomeHTML}Qualidades.txt","w")
-        curso =     open(f"{nomeHTML}Cursos.txt","w")
+    idioma =    open(f"{nomeHTML}Idioma.txt","w")
+    qualidade = open(f"{nomeHTML}Qualidades.txt","w")
+    curso =     open(f"{nomeHTML}Cursos.txt","w")
 
-        pergunta = 'S'
-        while pergunta.upper() == 'S':
-            id = input("Insira o idioma que você possui domínio: ")
-            n =  input("Qual a sua categoria de proeficiência nesse idioma?\n\n Iniciante - Básico/Elementar - Intermediário \n Intermediário Superior/Avançado - Avançado - Proeficiência Plena/Nativo\n\nEscolha: ")
-            idioma.write( "\n" + id + " - " + n + "\n\n")
-            pergunta = input("Você possui domínio em mais algum idioma? [S/N]: ")
+    pergunta = 'S'
+    while pergunta.upper() == 'S':
+        id = input("Insira o idioma que você possui domínio: ")
+        n =  input("Qual a sua categoria de proeficiência nesse idioma?\n\n Iniciante - Básico/Elementar - Intermediário \n Intermediário Superior/Avançado - Avançado - Proeficiência Plena/Nativo\n\nEscolha: ")
+        idioma.write( "\n" + id + " - " + n + "\n\n")
+        pergunta = input("Você possui domínio em mais algum idioma? [S/N]: ")
 
-        perguntaDois = 'S'
-        while perguntaDois.upper() == 'S':
-            q = input("Qualidade/Característica importante para o mercado de trabalho: ")
-            qualidade.write( q + "\n\n")
-            perguntaDois = input("Deseja adicionar outra qualidade/característica? [S/N]: " )
+    perguntaDois = 'S'
+    while perguntaDois.upper() == 'S':
+        q = input("Qualidade/Característica importante para o mercado de trabalho: ")
+        qualidade.write( q + "\n\n")
+        perguntaDois = input("Deseja adicionar outra qualidade/característica? [S/N]: " )
 
-        perguntaTres = 'S'
-        while perguntaTres.upper() == 'S':
-            cur = input("Você possui algum curso comprovado por certificado? [S/N]: ")
-            if cur.upper() == 'S':
-                Cn = input("Nome do curso: ")
-                i = input("Instituição: ")
-                p = input("Período em meses: ")
-                curso.write( "\n" + Cn + " - " + i + " - " + p + " meses" + "\n\n")
-            perguntaTres = input("Você possui mais algum curso que deseja adicionar? [S/N]: ")
-        perguntaIA = input("Deseja realizar o preenchimento dos seus dados de Informações Adicionais novamente? [S/N]: ")
+    perguntaTres = 'S'
+    while perguntaTres.upper() == 'S':
+        cur = input("Você possui algum curso comprovado por certificado? [S/N]: ")
+        if cur.upper() == 'S':
+            Cn = input("Nome do curso: ")
+            i = input("Instituição: ")
+            p = input("Período em meses: ")
+            curso.write( "\n" + Cn + " - " + i + " - " + p + " meses" + "\n\n")
+        else:
+            print("Ok, vamos continuar com o preenchimento do currículo.\n\n")
+            break
+        perguntaTres = input("Você possui mais algum curso que deseja adicionar? [S/N]: ")
 
     idioma.close()
     qualidade.close()
@@ -194,7 +183,7 @@ def htmlInserir():
     html = open(f"Curriculo_{nomeHTML}.html","w", encoding="utf-8")
     htmlCodigo = (f"""
 
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -249,26 +238,33 @@ def htmlInserir():
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 15rem;
+            gap: 10rem;
         }}
 
         .corpoCurriculo {{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             padding-top: 1rem;
             color: #000;
-            margin-left: 3rem;
-            margin-right: 3rem;
+            padding-left: 4rem;
+            padding-right: 3rem;
+            width:40rem;
         }}
 
         .corpoCurriculo p {{
             font-family: Arial, Helvetica, sans-serif;
             text-align: justify;
+            color: rgb(0, 0, 0);
+           
+            padding:1rem;
         }}
 
         .corpoCurriculo hr {{
             background-color: rgb(0, 0, 0, 0.8);
             border: none;
             height: 0.2rem;
-            width: auto;
+            width: 100%;
             padding-top: 0;
             padding-bottom: 0.1rem;
         }}
@@ -277,6 +273,10 @@ def htmlInserir():
             color: rgb(1, 1, 154);
             font-size: 1.5rem;
             padding-bottom: 0;
+            background-color: rgb(120, 120, 241);
+            border-left:0.2rem solid rgb(246, 234, 175);
+            padding-left:0.5rem;
+            margin:0;
         }}
     </style>
 </head>
